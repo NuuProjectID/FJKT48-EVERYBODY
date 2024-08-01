@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Font */
+@font-face {
+  font-family: "josefinsans";
+  src: url(../asset/font/josefinsans-regular-webfont.woff);
+}
+@font-face {
+  font-family: "poppins";
+  src: url(../asset/font/poppins-regular-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: "poppins-medium";
+  src: url(../asset/font/poppins-medium-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: "poppins-semibold";
+  src: url(../asset/font/poppins-semibold-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: "poppins-extrabolditalic";
+  src: url(../asset/font/poppins-extrabolditalic-webfont.woff) format("woff");
+}
+body {
+  font-family: "poppins";
+  box-sizing: border-box;
+  background-color: rgba(252, 189, 239, 0.925);
+  padding: 2rem 3rem;
+}
+nav .home-pg {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  z-index: 99;
+}
+nav .home-pg a button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #09eecf;
+  cursor: pointer;
+  border: none;
+  box-shadow: 8px 8px 9px rgba(114, 189, 194, 0.322);
+}
+nav .home-pg a button:hover {
+  background-color: blueviolet;
+  transition: all 0.5s;
+  color: rgba(252, 189, 239, 0.925);
+}
+nav .home-pg a button:active {
+  box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  transform: translate(0.4em, 0.4em);
+}
+section h1 {
+  text-align: center;
+  font-family: "poppins-semibold";
+  font-size: 3rem;
+  padding: 3.8rem;
+  text-shadow: 2px 2px 1.5px rgba(228, 133, 247, 0.904);
+}
+section h1 span {
+  color: rgba(237, 27, 36, 1);
+}
+section .box {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(163, 244, 255, 0.219);
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-shadow: 16px 16px 33px rgb(228, 133, 247);
+}
+section .box .box-img img {
+  width: 300px;
+  border-radius: 100%;
+  box-shadow: 0px 16px 20px rgb(228, 133, 247);
+}
+section form {
+  background-color: rgba(51, 201, 228, 0.192);
+  width: 300px;
+  box-shadow: 16px 16px 33px rgb(228, 133, 247);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+section form .input-group {
+  display: flex;
+  padding: 3px;
+  height: 50px;
+  background-color: rgb(228, 133, 247);
+  margin: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(163, 26, 190, 0.664);
+}
+section form .input-group input,
+section form .input-group textarea {
+  padding: 5px;
+  background-color: rgb(18, 236, 243);
+  color: rgb(0, 0, 0);
+  font-family: "poppins";
+  border-radius: 5px;
+  border: none;
+}
+.bx-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.btn-class-name {
+  --primary: 255, 90, 120;
+  --secondary: 150, 50, 60;
+  width: 60px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  outline: 10px solid rgb(var(--primary), 0.5);
+  border-radius: 100%;
+  position: relative;
+  transition: 0.3s;
+}
+
+.btn-class-name .back {
+  background: rgb(var(--secondary));
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-class-name .front {
+  background: linear-gradient(
+    0deg,
+    rgba(var(--primary), 0.6) 20%,
+    rgba(var(--primary)) 50%
+  );
+  box-shadow: 0 0.5em 1em -0.2em rgba(var(--secondary), 0.5);
+  border-radius: 100%;
+  position: absolute;
+  border: 1px solid rgb(var(--secondary));
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-15%);
+  transition: 0.15s;
+  color: rgb(var(--secondary));
+}
+.btn-class-name .front p {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-family: "poppins-medium";
+  color: rgba(0, 0, 0, 0.555);
+}
+.btn-class-name:active .front {
+  transform: translateY(0%);
+  box-shadow: 0 0;
+}
+@media (max-width: 495px) {
+  body {
+    padding: 0 2rem;
+  }
+  section h1 {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+  section .box {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  section .box .box-img img {
+    width: 250px;
+    margin: 2rem 0;
+  }
+  section form {
+    width: 280px;
+    box-shadow: 10px 10px 20px rgb(228, 133, 247);
+  }
+}
+@media (max-width: 371px) {
+  body {
+    padding: 0 2 rem;
+  }
+  section h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  section .box .box-img img {
+    width: 200px;
+    border-radius: 100%;
+    box-shadow: 0px 16px 20px rgb(228, 133, 247);
+  }
+  section form {
+    width: 220px;
+    padding: 0;
+  }
+}

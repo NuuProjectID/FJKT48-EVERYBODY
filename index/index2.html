@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JKT48</title>
+    <link rel="stylesheet" href="../css/style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../asset/img/JKT48 1.svg"
+      type="image/x-icon"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="home-pg">
+        <a href="../index.html#contact-us"
+          ><button><i class="fa-solid fa-arrow-rotate-left"></i></button
+        ></a>
+      </div>
+    </nav>
+    <section>
+      <h1>Contact Us <span>JKT48</span></h1>
+      <div class="box">
+        <div class="box-img">
+          <img src="../asset/img/JOT.jpg" alt="JKT48 Official" />
+        </div>
+        <form action="send.php" method="post" target="_blank">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" name="name" placeholder="Nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="at-sign"></i>
+            <input type="email" name="email" placeholder="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <textarea name="message" placeholder="Masukan Pesan"></textarea>
+          </div>
+          <input type="hidden" name="noWa" value="6283834420025" />
+          <div class="bx-btn">
+            <button type="submit" name="submit" class="btn-class-name">
+              <span class="back"></span>
+              <span class="front"><p>Send</p></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
